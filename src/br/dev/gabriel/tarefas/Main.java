@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import br.dev.gabriel.tarefas.ui.FuncionarioListaFrame;
+import br.dev.gabriel.tarefas.ui.GerenciamentoFrame;
 
 
 public class Main {
@@ -22,7 +23,8 @@ public class Main {
 		
 //		new FuncionarioFrame();
 		
-		new FuncionarioListaFrame();
+//		new FuncionarioListaFrame()
+		new GerenciamentoFrame();
 		
 	}
 

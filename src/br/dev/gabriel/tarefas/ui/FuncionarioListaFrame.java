@@ -47,7 +47,6 @@ public class FuncionarioListaFrame {
 		telaFuncionarioLista.setLayout(null);
 		telaFuncionarioLista.setLocationRelativeTo(null);
 		telaFuncionarioLista.setResizable(false);
-		
 		Container painel = telaFuncionarioLista.getContentPane();
 		
 		labelTitulo = new JLabel("Cadastro de Funcionários");
