@@ -44,6 +44,12 @@ public class GerenciamentoFrame {
 		
 		btnFuncionarios = new JButton("Funcionários");
 		btnFuncionarios.setBounds(100, 100, 500, 80);
+
+		btnFuncionarios.addChangeListener(e -> {
+			if (btnFuncionarios.getModel().isPressed()) {
+				new FuncionarioListaFrame();
+			}
+		});
 		
 		painel.add(labelTitulo);
 		painel.add(btnFuncionarios);

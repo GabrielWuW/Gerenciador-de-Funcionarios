@@ -5,23 +5,18 @@ import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Paths;
 
 public class ArquivoFuncionarioFactory {
-    private String caminho = "/Users/25132745/eclipse-workspace/tarefas/funcionarios.csv";
-    private FileWriter fw;
-    private BufferedWriter bw;
-    private FileReader fr;
-    private BufferedReader br;
+    private final String caminho = Paths.get(System.getProperty("user.dir"), "funcionarios.csv").toString();
 
-    public BufferedWriter getBw() throws IOException {
-        fw = new FileWriter(caminho, true);
-        bw = new BufferedWriter(fw);
-        return bw;
+    public BufferedWriter getBufferedWriter(boolean append) throws IOException {
+        FileWriter fw = new FileWriter(caminho, append);
+        return new BufferedWriter(fw);
     }
 
-    public BufferedReader getBr() throws IOException {
-        fr = new FileReader(caminho);
-        br = new BufferedReader(fr);
-        return br;
+    public BufferedReader getBufferedReader() throws IOException {
+        FileReader fr = new FileReader(caminho);
+        return new BufferedReader(fr);
     }
 }
