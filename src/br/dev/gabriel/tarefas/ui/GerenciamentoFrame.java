@@ -58,7 +58,7 @@ public class GerenciamentoFrame {
 
 		btnTarefas.addChangeListener(e -> {
 			if (btnTarefas.getModel().isPressed()) {
-				
+				new TarefaListaFrame();
 			}
 		});
 		

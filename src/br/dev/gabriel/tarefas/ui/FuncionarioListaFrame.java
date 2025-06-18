@@ -53,7 +53,7 @@ public class FuncionarioListaFrame {
 		labelTitulo.setBounds(10, 10, 500, 40);
 		labelTitulo.setFont(null);
 		labelTitulo.setFont(new Font("Arial", Font.BOLD, 32));
-		labelTitulo.setForeground(Color.red);
+		labelTitulo.setForeground(Color.magenta);
 		
 		
 		model = new DefaultTableModel(colunas, 10);
@@ -77,7 +77,6 @@ public class FuncionarioListaFrame {
 			public void actionPerformed(ActionEvent e) {
 				new FuncionarioFrame(telaFuncionarioLista);
 				carregarDadosTabela();
-				
 			}
 		});
 		

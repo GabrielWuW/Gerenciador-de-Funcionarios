@@ -54,6 +54,10 @@ public class Tarefa {
 		this.dataInicio = dataInicio;
 	}
 
+	public static DateTimeFormatter getFormatter() {
+		return FORMATTER;
+	}
+	
 	public boolean setDataInicio(String dataInicioStr) {
 		try {
 			LocalDate data = LocalDate.parse(dataInicioStr, FORMATTER);
