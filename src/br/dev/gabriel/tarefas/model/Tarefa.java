@@ -46,6 +46,14 @@ public class Tarefa {
 		return dataInicio;
 	}
 
+	public void setDataInicio(LocalDate dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
+	public void setDataEntrega(LocalDate dataInicio) {
+		this.dataInicio = dataInicio;
+	}
+
 	public boolean setDataInicio(String dataInicioStr) {
 		try {
 			LocalDate data = LocalDate.parse(dataInicioStr, FORMATTER);
@@ -105,9 +113,9 @@ public class Tarefa {
 		return nome + "," +
 				descricao + "," +
 				(responsavel != null ? responsavel.getNome() : "sem-responsavel") + "," +
-				(dataInicio != null ? dataInicio : "sem-data-inicio") + "," +
+				(dataInicio != null ? dataInicio.format(FORMATTER) : "sem-data-inicio") + "," +
 				prazo + "," +
-				(getDataEntrega() != null ? getDataEntrega() : "sem-data-entrega") + "," +
+				(getDataEntrega() != null ? getDataEntrega().format(FORMATTER) : "sem-data-entrega") + "," +
 				getStatus();
 	}
 }
