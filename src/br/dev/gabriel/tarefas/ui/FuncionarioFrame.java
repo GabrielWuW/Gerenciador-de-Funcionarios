@@ -61,7 +61,7 @@ public class FuncionarioFrame {
 		txtMatricula = new JTextField();
 		txtMatricula.setBounds(10, 50, 150, 30);
 		txtMatricula.setEnabled(false);
-		txtMatricula.setText(Utils.gerarUUID8());
+		txtMatricula.setText(Utils.gerarUUID8().toUpperCase());
 		
 		labelNome = new JLabel("Nome:");
 		labelNome.setBounds(10, 85, 150, 30);

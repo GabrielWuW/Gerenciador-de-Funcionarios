@@ -72,7 +72,7 @@ public class TarefaListaFrame {
         btnNovaTarefa.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new TarefaFrame();
+                new TarefaFrame(telaTarefaLista);
                 carregarDadosTabela();
             }
         });

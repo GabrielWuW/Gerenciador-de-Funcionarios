@@ -66,8 +66,5 @@ public class GerenciamentoFrame {
 		painel.add(btnFuncionarios);
 		painel.add(btnTarefas);
 		telaGerenciador.setVisible(true);
-
-		
-		
 	}
 }

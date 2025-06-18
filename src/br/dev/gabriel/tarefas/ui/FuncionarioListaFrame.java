@@ -28,7 +28,7 @@ public class FuncionarioListaFrame {
 	private DefaultTableModel model;
 	private JTable tabelaFuncionarios;
 	private JScrollPane scrollFuncionarios;
-	String[] colunas = {"CÓDIGO", "NOME", "FUNCIONÁRIO", "CARGO"};
+	String[] colunas = {"CÓDIGO", "NOME", "CARGO"};
 	
 	
 	public FuncionarioListaFrame() {
