@@ -7,64 +7,37 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
+
+import br.dev.gabriel.tarefas.model.Funcionario;
+import br.dev.gabriel.tarefas.model.Tarefa;
 import br.dev.gabriel.tarefas.ui.FuncionarioListaFrame;
 import br.dev.gabriel.tarefas.ui.GerenciamentoFrame;
 
-
 public class Main {
-	
+
 	public static void main(String[] args) {
-//		Funcionario funcionario = new Funcionario("Maria", "Gerente");
-//		funcionario.setSetor("Tecnologia da Informação");
-//		funcionario.setSalario(9987.98);
-//		
-//		FuncionarioDAO dao = new FuncionarioDAO(funcionario);
-//		dao.gravar();
-		
-//		new FuncionarioFrame();
-		
-//		new FuncionarioListaFrame()
-		new GerenciamentoFrame();
-		
-	}
+		// Funcionario funcionario = new Funcionario("Maria", "Gerente");
+		// funcionario.setSetor("Tecnologia da Informação");
+		// funcionario.setSalario(9987.98);
+		//
+		// FuncionarioDAO dao = new FuncionarioDAO(funcionario);
+		// dao.gravar();
 
-	private static void testarLeituraEscritaArquivo() {
-		String so = System.getProperty("os.name");
-		System.out.println(so);
-		
-		String caminho = "/Users/25132745/projetoTarefas/tarefas";
-		FileReader fr = null;
-		BufferedReader br = null;
-		
-		FileWriter fw = null;
-		BufferedWriter bw = null;
-		
-		try {
-			fr = new FileReader(caminho);
-			br = new BufferedReader(fr);
-			
-			fw = new FileWriter(caminho, true);
-			bw = new BufferedWriter(fw);
-			
-			bw.append("Marcel\n");
-			bw.flush();
-			
-			String linha = br.readLine();
-			System.out.println(linha);
-			linha = br.readLine();
-			while (linha != null) {
-				System.out.println(linha);
-				linha = br.readLine();
-				
-			}
-			
-		} catch (FileNotFoundException erro) {
-			System.out.println("Arquivo não encontrado!");
-		} catch ( IOException erro) {
-			System.out.println("Arquivo protegido para leitura");
-		} catch (Exception erro) {
-			System.out.println(erro.getMessage());
-		}
-	}
+		// new FuncionarioFrame();
 
+		// new FuncionarioListaFrame()
+		// new GerenciamentoFrame();
+
+		Funcionario funcionario = new Funcionario("Destruidor de planetas");
+		Tarefa tarefa = new Tarefa(funcionario);
+		tarefa.setNome("Destruir Jupiter");
+		tarefa.setDescricao("Vá até Júpiter e destrua-o com um ataque de laser, e faça seus habitantes sofrerem.");
+
+		tarefa.setDataInicio("15/06/2025");
+
+		tarefa.setPrazo(10);
+
+		System.out.println(tarefa);
+	}
 }

@@ -44,15 +44,27 @@ public class GerenciamentoFrame {
 		
 		btnFuncionarios = new JButton("Funcionários");
 		btnFuncionarios.setBounds(100, 100, 500, 80);
+		btnFuncionarios.setFont(new Font("Arial", Font.BOLD, 24));
+
+		btnTarefas = new JButton("Tarefas");
+		btnTarefas.setBounds(100, 200, 500, 80);
+		btnTarefas.setFont(new Font("Arial", Font.BOLD, 24));
 
 		btnFuncionarios.addChangeListener(e -> {
 			if (btnFuncionarios.getModel().isPressed()) {
 				new FuncionarioListaFrame();
 			}
 		});
+
+		btnTarefas.addChangeListener(e -> {
+			if (btnTarefas.getModel().isPressed()) {
+				
+			}
+		});
 		
 		painel.add(labelTitulo);
 		painel.add(btnFuncionarios);
+		painel.add(btnTarefas);
 		telaGerenciador.setVisible(true);
 
 		

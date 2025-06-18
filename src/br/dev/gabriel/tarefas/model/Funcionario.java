@@ -67,5 +67,4 @@ public class Funcionario {
 	public String toString() {
 		return matricula + "," + nome + "," + cargo + "," + setor + "," + salario + "\n";
 	}
-
 }
